@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import logoUnefa from './assets/logo_unefa.jpg';
-import logoTecnico from './assets/logo_tecnico.png';  
+import logoTecnico from './assets/logo_tecnico.png';
 
 const Header = () => {
   const navigate = useNavigate();
