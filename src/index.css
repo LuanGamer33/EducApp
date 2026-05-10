@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Titan+One&display=swap');
+
+:root {
+  --primary-blue: #5c74d6;
+  --dark-blue: #4054a8;
+  --accent-yellow: #ffc107;
+  --bg-color: #f8f9fa;
+  --card-light: #f1f3f5;
+  --text-dark: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  background-image: url('./assets/fondo_background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Playful Title Font */
+h1.title, .playful-text {
+  font-family: 'Titan One', cursive;
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  /* textured outline effect approximation */
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8),
+               -1px -1px 0px rgba(255, 255, 255, 0.8),
+               1px -1px 0px rgba(255, 255, 255, 0.8),
+               -1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+/* Common Components */
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-yellow {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* Header */
+.header {
+  background-color: #f1f3f5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #e0e0e0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-blue);
+  border-radius: 12px;
+}
+
+.header-title {
+  font-weight: 900;
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  max-width: 300px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  background-color: #f1f3f5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #e0e0e0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--primary-blue);
+  text-align: center;
+  flex: 1;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 900;
+  color: var(--primary-blue);
+}
+
+/* Cards */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.cards-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 700px;
+}
+
+.cards-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card.blue {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.card.white {
+  background-color: var(--card-light);
+  color: var(--primary-blue);
+}
+
+.card-top-bar {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.card.blue .card-top-bar {
+  background-color: var(--dark-blue);
+}
+
+.card.white .card-top-bar {
+  background-color: var(--accent-yellow);
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-number {
+  font-family: 'Titan One', cursive;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.card.blue .card-number {
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.card.white .card-number {
+  color: var(--primary-blue);
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  border: 4px solid var(--accent-yellow);
+  max-width: 400px;
+  width: 90%;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
