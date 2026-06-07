@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload only the dist folder
-          path: 'dist'
+          path: '/home/runner/work/repositorio/dist'
       
       - name: Deploy to GitHub Pages
         id: deployment
