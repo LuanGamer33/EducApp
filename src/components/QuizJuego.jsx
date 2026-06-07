@@ -256,13 +256,8 @@ const QuizJuego = () => {
     if (stored) {
       setScoreboard(JSON.parse(stored));
     } else {
-      const defaultScoreboard = [
-        { name: 'Luan', category: 'Redes', pts: 45 },
-        { name: 'Pedro', category: 'Arq. Computador', pts: 35 },
-        { name: 'Ana', category: 'Lógica', pts: 30 }
-      ];
-      localStorage.setItem(key, JSON.stringify(defaultScoreboard));
-      setScoreboard(defaultScoreboard);
+      localStorage.setItem(key, JSON.stringify([]));
+      setScoreboard([]);
     }
   }, []);
 

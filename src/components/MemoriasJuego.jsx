@@ -195,13 +195,8 @@ const MemoriasJuego = () => {
     if (stored) {
       setScoreboard(JSON.parse(stored));
     } else {
-      const defaultScores = [
-        { name: 'Luan', category: 'Redes', pts: 180 },
-        { name: 'Pedro', category: 'Arq. Computador', pts: 120 },
-        { name: 'Ana', category: 'Lógica', pts: 90 }
-      ];
-      localStorage.setItem(key, JSON.stringify(defaultScores));
-      setScoreboard(defaultScores);
+      localStorage.setItem(key, JSON.stringify([]));
+      setScoreboard([]);
     }
   }, []);
 
