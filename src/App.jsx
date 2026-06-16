@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Inicio from './components/Inicio';
 import Minijuegos from './components/Minijuegos';
 import Biblioteca from './components/Biblioteca';
+import BibliotecaDetalle from './components/BibliotecaDetalle';
 import QuizCategorias from './components/QuizCategorias';
 import QuizJuego from './components/QuizJuego';
 import MemoriasCategorias from './components/MemoriasCategorias';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/minijuegos" element={<Minijuegos />} />
           <Route path="/biblioteca" element={<Biblioteca />} />
+          <Route path="/biblioteca/:moduloId" element={<BibliotecaDetalle />} />
           <Route path="/quiz" element={<QuizCategorias />} />
           <Route path="/quiz/:categoria" element={<QuizJuego />} />
           <Route path="/memorias" element={<MemoriasCategorias />} />

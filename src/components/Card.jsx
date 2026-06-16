@@ -11,9 +11,11 @@ const Card = ({ type, title, actionText, to, icon, number }) => {
       {icon && <div className="card-icon" style={{ marginBottom: '1rem' }}>{icon}</div>}
       
       <div className="card-title">{title}</div>
-      <button className="btn btn-yellow" onClick={(e) => { e.stopPropagation(); navigate(to); }}>
-        {actionText}
-      </button>
+      {actionText && (
+        <button className="btn btn-yellow" onClick={(e) => { e.stopPropagation(); navigate(to); }}>
+          {actionText}
+        </button>
+      )}
     </div>
   );
 };

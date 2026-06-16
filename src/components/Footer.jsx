@@ -1,5 +1,5 @@
 import React from 'react';
-import logoUnefa from '../assets/logo_unefa.jpg';
+import logoUnefa from '../assets/logo_unefa.webp';
 
 const Footer = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -27,10 +27,12 @@ const Footer = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2 className="title" style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--primary-blue)' }}>Creadores</h2>
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: '1.8' }}>
-              <li><strong>Diseñador/es</strong></li>
-              <li>...</li>
-              <li><strong>Desarrollador/es</strong></li>
-              <li>...</li>
+              <li>Aleiska Alfonsi</li>
+              <li>Arnaldo Villarroel</li>
+              <li>Diego Quijada</li>
+              <li>Franyelis Gonzalez</li>
+              <li>Jesús Cabello</li>
+              <li>José Fernández</li>
             </ul>
             <button className="btn btn-blue" style={{ marginTop: '2rem' }} onClick={() => setShowModal(false)}>Cerrar</button>
           </div>
